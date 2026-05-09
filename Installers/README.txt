@@ -94,6 +94,10 @@ Changes for DeepSkyStacker 6.2.0 Beta 8
 27. Bug fix: An exception was thrown for "invalid deque<T> subscript" if an image wasn't loaded
     in the processing pane and any of Copy to clipboard, Create a Star Mask or Save image were selected.
 
+28. Japanese help files contributed by 三浦 修 (Miura Shu), thank you once again.
+
+29. Corrections to the French help files kindly provided by Luc Coiffier.
+
 Changes for DeepSkyStacker 6.1.3
 ================================
 
