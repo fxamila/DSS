@@ -1,4 +1,4 @@
-Welcome to DeepSkyStacker 6.2.0 Beta 8
+Welcome to DeepSkyStacker 6.2.0
 ===============================
 
 Reporting problems:
@@ -14,7 +14,7 @@ Known problems:
    custom edit control for the table cell.
    This is considered a LOW priority issue - if anyone wants to develop code to do this a pull request will be considered.
 
-Changes for DeepSkyStacker 6.2.0 Beta 8
+Changes for DeepSkyStacker 6.2.0
 ================================
 
 1.  Change the UI for the Raw/DDP Processing settings so that the choice of white balance processing is made much clearer.
