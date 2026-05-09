@@ -18,6 +18,12 @@
 <p><b><font face="Arial" size="5">User's Manual<br>
 </font></b><font face="Arial">The command line User's Manual is available
 <A href="commandline.htm">here</A></font></p>
+
+<p><FONT face=Arial>If you have any 
+problems with DeepSkyStacker, please report then to the DeepSkyStacker mailing 
+list hosted at groups.io:<BR>      
+           
+</FONT><A href="https://groups.io/g/DeepSkyStacker"><FONT face=Arial>https://groups.io/g/DeepSkyStacker</FONT></A></p>
 <blockquote>
 
 <p><b><font face="Arial"><A href="#Introduction">Introduction</A><br>
@@ -364,7 +370,7 @@ is greater than or equal to the given threshold value. </font></P>
 <p><font size=2 face=Arial><br>After the stacking process, the resulting image is saved in 
 the AutoSave.tif file which is created in the folder of the reference light 
 frame..<br>If an Autosave.tif file already exists in the 
-folder, an Autosave001.tif (002, 003, ...) is created.</FONT></p>
+folder, an Autosave001.tif (002, 003, ...) is created.</FONT></P>
 <hr color=#0000ff>
 
 <p><b><font color=#ff0000 size=4 face=Arial><a name=batchstacking></A>Batch Stacking<br></FONT></B><font size=2 face=Arial>The Batch Stacking dialog is used to 
@@ -378,11 +384,12 @@ cellPadding=0 width=1165 border=0>
       <p class=Standard><font size=2 face=Arial       >For example it may be used to create the resulting 
       images from the red, green, blue and luminance images without the need to 
       load each list then start manually the stacking process for each one.<br 
-      ><br>Of course it also may be used 
-      to stack any existing list.<br><br 
-      >You just need to add the file lists previously created 
-      by the Save File List command to the list.<br>Each 
-      File List that is checked will be processed.</FONT></P>
+      ><br>Of course it also may be 
+      used to stack any existing list.<br><br 
+      >You just need to add the file lists previously 
+      created by the Save File List command to the list.<br 
+      >Each File List that is checked will be 
+      processed.</FONT></P>
       <p class=Standard><font size=2 face=Arial       >At the end of the stacking process, the output file 
       name replaces the list name for each processed file list.</FONT></P>
       <p class=Standard><u><b 
@@ -1393,9 +1400,9 @@ borderColor=#111111 cellSpacing=0 cellPadding=0 width="85%" border=0>
       <P>The stretch factor (otherwise known as beta) can 
       take values between 0.0 and 1000.0.&nbsp;&nbsp; Larger values result in a 
       greater degree of image stretching being applied.<BR 
-      ><BR>The "black point" value has a 
-      range of&nbsp;[00000,&nbsp;0.20000].&nbsp;&nbsp; The value of 0.2 implies 
-      that the blackpoint is set to 20% of the maximum possible ADU 
+      ><BR>The "black point" value has 
+      a range of&nbsp;[00000,&nbsp;0.20000].&nbsp;&nbsp; The value of 0.2 
+      implies that the blackpoint is set to 20% of the maximum possible ADU 
       value.&nbsp;&nbsp;&nbsp; Values below the back point are treated as being 
       black.</P>
       <P>As rgb_original is an average of the three colour 
@@ -1405,11 +1412,11 @@ borderColor=#111111 cellSpacing=0 cellPadding=0 width="85%" border=0>
       adjust the "gain" applied to the channels) is used to ensure 
       that&nbsp;such&nbsp;clipping does not&nbsp;occur.</P>
       <P>When the Human-weighted luminance option is <EM 
-      ><STRONG>not ticked</STRONG></EM>, 
-      rgb_original is the mean of the three pixel values; when it is set, the 
-      weighting changes to 0.2126 for the red value, 0.7152 for the green value 
-      and 0.0722 for the blue value, which gets results closer to human 
-      perceptual color balance.</P>
+      ><STRONG>not 
+      ticked</STRONG></EM>, rgb_original is the mean of the three pixel values; 
+      when it is set, the weighting changes to 0.2126 for the red value, 0.7152 
+      for the green value and 0.0722 for the blue value, which gets results 
+      closer to human perceptual color balance.</P>
       <P>If the Preview check box is ticked (the default 
       setting), then adjusting the parameters (by editing the spin box fields 
       directly, or by selecting the spin box or slider and using the Page-Up 
@@ -1474,9 +1481,9 @@ style='FONT-SIZE: 12pt; COLOR: black; mso-fareast-font-family: "Times New Roman"
 <p></SPAN></SPAN></SPAN></SPAN></SPAN><FONT size=2><FONT face=Arial>Undo/Redo adjustment 
 parameters</FONT> </FONT></P>
 <p class=MsoNormal style="MARGIN: 0cm" align=justify><FONT size=2></FONT>&nbsp;</P>
-<p class=MsoNormal style="MARGIN: 0cm" align=justify><FONT size=2><FONT face=Arial>On the bottom of 
-each tab a set of buttons is available:<br>- to apply the 
-last modifications to the picture<br>- to undo the last 
+<p class=MsoNormal style="MARGIN: 0cm" align=justify><FONT size=2><FONT face=Arial>On the bottom 
+of each tab a set of buttons is available:<br>- to apply 
+the last modifications to the picture<br>- to undo the last 
 applied modifications<br>- to redo the last undone 
 modifications<br>- to reset all the values<br></FONT><br><FONT face=Arial>Loading a picture</FONT> </FONT></P>
 <p class=MsoNormal style="MARGIN: 0cm" align=justify><br><FONT size=2 face=Arial>DeepSkyStacker 
@@ -1493,30 +1500,29 @@ cellSpacing=0 cellPadding=0 width="87%" border=0>
       32 bit TIFF or FITS&nbsp; files using two methods:</FONT></P>
       <UL>
         <LI>
-        <div class=Standard><font size=2 face=Arial         >Applying the adjustments:&nbsp; This saves the image 
-        with any changes you have made using the&nbsp;"Apply" 
+        <div class=Standard><font size=2 face=Arial         >Applying the adjustments:&nbsp; This saves the 
+        image with any changes you have made using the&nbsp;"Apply" 
         button.&nbsp;&nbsp; You should use this if you plan to do further 
         adjustments in other software.<BR></FONT></DIV>
         <LI>
-        <div class=Standard><font size=2 face=Arial         >Not applying the adjustments:&nbsp;&nbsp; This saves 
-        the image without any changes that you have made using the&nbsp;"Apply" 
-        button.&nbsp;&nbsp; You should use this if you plan to do all post 
-        processing in other software.<br 
+        <div class=Standard><font size=2 face=Arial         >Not applying the adjustments:&nbsp;&nbsp; This 
+        saves the image without any changes that you have made using 
+        the&nbsp;"Apply" button.&nbsp;&nbsp; You should use this if you plan to 
+        do all post processing in other software.<br 
         >&nbsp;</FONT></DIV></LI></UL></TD>
     <td width="46%"><IMG style="HEIGHT: 123px; WIDTH: 415px" border=0 alt="" src="../images/english/saveoptions.png" width=314 height=84 ></TD></TR></TABLE>
 <p><font size=2 face=Arial>For more 
 information about the saving methods you can read the <A href="faq.htm#saveresult" >faq</A>.</FONT></P>
 <hr color=#0000ff>
 
-<p align=justify><b><font color=#ff0000 size=4 face=Arial><a name=creatingstarmask></A>Create a Star Mask<br></FONT></B><font size=2 face=Arial>Using 
-a Star Mask is often very useful during post-processing to use different 
-processing techniques for the stars and for the rest of the image.<br>The Create a Star Mask feature may be used to create a 
-variety of star masks that can be used later in any software you are using to 
-post process (Photoshop, PixInsight, ...).<br><br><font color=#ff0000>DeepSkyStacker 
-will&nbsp;only creating star mask files. It&nbsp;does not use them in any 
-way.</FONT><br>You can view this feature as a tool intended 
-to provide quickly and simply a star mask file based on real star 
-detection.</FONT></P>
+<p align=justify><b><font color=#ff0000 size=4 face=Arial><a name=creatingstarmask></A>Create a Star Mask<br></FONT></B><font size=2 face=Arial>Using a Star Mask is often very useful during 
+post-processing to use different processing techniques for the stars and for the 
+rest of the image.<br>The Create a Star Mask feature may be 
+used to create a variety of star masks that can be used later in any software 
+you are using to post process (Photoshop, PixInsight, ...).<br><br><font color=#ff0000>DeepSkyStacker will&nbsp;only creating star mask files. 
+It&nbsp;does not use them in any way.</FONT><br>You can 
+view this feature as a tool intended to provide quickly and simply a star mask 
+file based on real star detection.</FONT></P>
 <table id=AutoNumber21 cellSpacing=1 width="100%" border=0 
   >
   <tr>
@@ -1525,24 +1531,27 @@ detection.</FONT></P>
       >A star mask is a synthetic grayscale image on which 
       each bright enough star is replaced by a round white area which is fading 
       to black following a curve.<br><br 
-      >You can see an example of a star mask on the right.<br 
-      >Mouse over the text to see <b><A onmouseover="document['STARMASK01'].src='../images/StarMask_Stars.jpg';document.getElementById('STARMASK01TEXT').innerHTML='Star Field';" href="javascript:void(0);" >the image</A></B> or <b 
+      >You can see an example of a star mask on the 
+      right.<br>Mouse over the text to see <b 
+      ><A onmouseover="document['STARMASK01'].src='../images/StarMask_Stars.jpg';document.getElementById('STARMASK01TEXT').innerHTML='Star Field';" href="javascript:void(0);" >the image</A></B> or <b 
       ><A onmouseover="document['STARMASK01'].src='../images/StarMask_Mask.jpg';document.getElementById('STARMASK01TEXT').innerHTML='Star Mask';" href="javascript:void(0);" >the star mask</A></B>.</FONT></P></TD>
     <td width="56%">
-      <p align=center><IMG id=STARMASK01 border=0 name=STARMASK01 src="../images/StarMask_Stars.jpg" width=279 align=center height=291 ><br><font       size=2 face=Arial><b id=STARMASK01TEXT 
-       name="STARMASK01TEXT">Star Field</B></FONT></P></TD></TR>
+      <p align=center><IMG id=STARMASK01 border=0 name=STARMASK01 src="../images/StarMask_Stars.jpg" width=279 align=center height=291 ><br 
+      ><font size=2 face=Arial><b 
+      id=STARMASK01TEXT name="STARMASK01TEXT">Star 
+      Field</B></FONT></P></TD></TR>
   <tr>
     <td vAlign=top width="44%">
       <p class=Standard><font size=2 face=Arial       ><b>Star Mask Creation</B><br 
       >To create a Star Mask you must load an image in the 
       processing tab.<br>&nbsp;</FONT> 
-      <p class=Standard><font size=2 face=Arial       >Then just click on the Create Star Mask... menu on the 
-      right and the dialog on the right will open.</FONT> 
+      <p class=Standard><font size=2 face=Arial       >Then just click on the Create Star Mask... menu on 
+      the right and the dialog on the right will open.</FONT> 
       <p class=Standard><font size=2 face=Arial       >From there you can change the shape of the stars in 
       the mask, the star detection threshold and a few other parameters.</FONT> 
-      <p class=Standard><font size=2 face=Arial       >Once you are done, just click on the OK button and you 
-      will be asked to select a file (either a TIFF or a FITS file) in which the 
-      star mask will be saved.</FONT> 
+      <p class=Standard><font size=2 face=Arial       >Once you are done, just click on the OK button and 
+      you will be asked to select a file (either a TIFF or a FITS file) in which 
+      the star mask will be saved.</FONT> 
       <p class=Standard><font size=2 face=Arial       >The saved file is always a grayscale 16 bit image. It 
       is not automatically loaded by DeepSkyStacker.</FONT> 
       <p class=Standard><font size=2 face=Arial       >The star mask is always created from the image as you 
@@ -1552,17 +1561,18 @@ detection.</FONT></P>
       <p align=center><IMG border=0 src="../images/english/CreateStarMask.jpg" width=407 height=401 ></P></TD></TR></TABLE>
 <hr color=#0000ff>
 
-<p><font color=#ff0000 size=4 face=Arial><b><a name=imagelist></A>The Picture List<br></B></FONT><font size=2 face=Arial>The picture list, common to Registering 
-and Stacking processes contains all the pictures used by the registering and 
-stacking processes.<br>- Light frames<br>- Dark frames<br>- Flat frames<br>- bias/offsets frames<br><br>Only the checked pictures are used by the registering and 
-stacking processes.<br><br>The list 
-contains the following columns:</FONT></P>
-<table id=AutoNumber1 cellSpacing=1 width="100%" border=1>
-  
+<p><font color=#ff0000 size=4 face=Arial><b><a name=imagelist></A>The Picture List<br></B></FONT><font size=2 face=Arial>The 
+picture list, common to Registering and Stacking processes contains all the 
+pictures used by the registering and stacking processes.<br>- Light frames<br>- Dark frames<br>- Flat frames<br>- bias/offsets 
+frames<br><br>Only the checked 
+pictures are used by the registering and stacking processes.<br><br>The list contains the following 
+columns:</FONT></P>
+<table id=AutoNumber1 cellSpacing=1 width="100%" border=1 
+  >
   <tr>
     <td bgColor=#ebe9ed width="17%"><font size=2       face=Arial>Checkbox</FONT></TD>
     <td bgColor=#ebe9ed width="83%"><font size=2       face=Arial>checked if the picture should be 
-    used</FONT></TD></TR>
+      used</FONT></TD></TR>
   <tr>
     <td width="17%"><font size=2 face=Arial       >Path</FONT></TD>
     <td width="83%"><font size=2 face=Arial       >Path to the picture file</FONT></TD></TR>
@@ -1599,7 +1609,7 @@ contains the following columns:</FONT></P>
   <tr>
     <td width="17%"><font size=2 face=Arial       >Size</FONT></TD>
     <td width="83%"><font size=2 face=Arial       >Size of the picture in pixel (Width x 
-  Height)</FONT></TD></TR>
+    Height)</FONT></TD></TR>
   <tr>
     <td bgColor=#ebe9ed width="17%"><font size=2       face=Arial>CFA</FONT></TD>
     <td bgColor=#ebe9ed width="83%"><font size=2       face=Arial>Yes if the picture is resulting from a 
@@ -1627,21 +1637,20 @@ contains the following columns:</FONT></P>
   <tr>
     <td bgColor=#ebe9ed width="17%"><font size=2       face=Arial>#Stars</FONT></TD>
     <td bgColor=#ebe9ed width="83%"><font size=2       face=Arial>Number of detected stars.<br 
-      >When a comet position is set a +(C) is appended to the 
-      number of stars</FONT></TD></TR>
+      >When a comet position is set a +(C) is appended to 
+      the number of stars</FONT></TD></TR>
   <tr>
     <td bgColor=#ffffff width="17%"><font size=2       face=Arial>Sky Background</FONT></TD>
     <td bgColor=#ffffff width="83%"><font size=2       face=Arial>Sky background value for registered image 
       in %</FONT></TD></TR></TABLE>
-<p><font size=2 face=Arial>You can sort 
-the list on any column by clicking on the column header (and by clicking again 
-to reverse the sort order).<br><br>You 
-can change the columns order and each column width. Everything is saved after 
-each use of DeepSkyStacker. The column widths order will be reloaded the next 
-time DeepSkyStacker is used.<br><br>You 
-can preview a picture from the list by selecting it.<br>If 
-the selected picture is a RAW file, the RAW DDP settings will be used to decode 
-the RAW file before previewing it.</FONT></P>
+<p><font size=2 face=Arial>You can 
+sort the list on any column by clicking on the column header (and by clicking 
+again to reverse the sort order).<br><br>You can change the columns order and each column width. 
+Everything is saved after each use of DeepSkyStacker. The column widths order 
+will be reloaded the next time DeepSkyStacker is used.<br><br>You can preview a picture from the 
+list by selecting it.<br>If the selected picture is a RAW 
+file, the RAW DDP settings will be used to decode the RAW file before previewing 
+it.</FONT></P>
 <table id=AutoNumber11 style="BORDER-COLLAPSE: collapse" borderColor=#111111 
 cellSpacing=0 cellPadding=0 width="94%" border=0>
   
@@ -1681,10 +1690,12 @@ cellSpacing=0 cellPadding=0 width="94%" border=0>
     <td width="62%" align=center><IMG border=0 alt="DeepSkyStacker - File Properties" src="../images/english/Properties.jpg" width=399 height=312 ></TD></TR></TABLE>
 <hr color=#0000ff>
 
-<p><b><font color=#ff0000 size=4 face=Arial><a name=imagepreview></A>Picture Preview<br></FONT></B><font size=2 face=Arial>The picture preview is used to quickly 
-view a picture from the picture list (Registering and Stacking Tabs) or to view 
-the picture being processed (Processing Tab).<br><br>You can zoom in and zoom out by pointing the mouse and using 
-the wheel. This is the only way to pan and to zoom.</FONT></P>
+<p><b><font color=#ff0000 size=4 face=Arial><a name=imagepreview></A>Picture Preview<br></FONT></B><font size=2 face=Arial>The 
+picture preview is used to quickly view a picture from the picture list 
+(Registering and Stacking Tabs) or to view the picture being processed 
+(Processing Tab).<br><br>You can zoom 
+in and zoom out by pointing the mouse and using the wheel. This is the only way 
+to pan and to zoom.</FONT></P>
 <p><font face=Arial><b>Star and Comet editing</B></FONT></P>
 <table id=AutoNumber6 style="BORDER-COLLAPSE: collapse" borderColor=#111111 
 cellSpacing=0 cellPadding=0 width="78%" border=0>
@@ -1714,24 +1725,25 @@ cellSpacing=0 cellPadding=0 width="78%" border=0>
         
         <tr>
           <td bgColor=#ffff99 width="100%">
-            <p class=Standard><font color=#ff0000 size=2             face=Arial><b>Comet editing 
-            note:</B><br>The comet center may not be 
-            automatically detected by DeepSkyStacker.<br>To 
-            <b>force</B> the comet to a given&nbsp; position 
-            hold down the <b>Shift</B> key while positioning 
-            the comet center.</FONT></P></TD></TR></TABLE></P></TD>
+            <p class=Standard><font color=#ff0000 size=2             face=Arial><b>Comet 
+            editing note:</B><br>The comet center may not 
+            be automatically detected by DeepSkyStacker.<br 
+            >To <b>force</B> the comet 
+            to a given&nbsp; position hold down the <b 
+            >Shift</B> key while positioning the comet 
+            center.</FONT></P></TD></TR></TABLE></P></TD>
     <td width="47%">
       <p align=center><IMG border=0 src="../images/EditToolbar.jpg" width=279 height=265 ></P></TD></TR>
   <tr>
     <td width="53%">
-      <p class=Standard><font size=2 face=Arial       >When used from the processing tab, the picture preview 
-      may be used to select a part of the image by drawing a rectangle directly 
-      on the picture. </FONT></P>
+      <p class=Standard><font size=2 face=Arial       >When used from the processing tab, the picture 
+      preview may be used to select a part of the image by drawing a rectangle 
+      directly on the picture. </FONT></P>
       <p class=Standard><font size=2 face=Arial       >This rectangle is used on one hand to apply the 
       adjustments only to this rectangle and on the other hand, optionally, to 
       save only a part of the image.<br>&nbsp;</FONT></P>
-      <p class=Standard><font size=2 face=Arial       >If no rectangle is defined the adjustments are applied 
-      to the full image.</FONT></P>
+      <p class=Standard><font size=2 face=Arial       >If no rectangle is defined the adjustments are 
+      applied to the full image.</FONT></P>
       <p class=Standard><font size=2 face=Arial       >In all the cases, when the image is saved to disk the 
       adjustments are applied to the full image.</FONT> 
       <p>&nbsp;</P></TD>
@@ -1756,30 +1768,30 @@ borderColor=#111111 cellSpacing=0 cellPadding=5 width="82%" border=0>
         <div class=Standard><FONT size=2 face=Arial         >The overall image brightness which applies to the 
         green channel</FONT></DIV>
         <LI>
-        <div class=Standard><FONT size=2 face=Arial         >The brightness of the Red and Blue channels relative 
-        to the Green channel.<BR></FONT></DIV></LI></UL>
-      <p class=Standard><FONT face=Arial       ><FONT size=2>Image&nbsp;Adjustment 
-      (or Color Adjustment) is applied after the image has been read and scaled 
-      appropriately for the type of image (Raw, FITS or TIFF), and after all 
-      calibration frames have been applied.&nbsp;&nbsp;&nbsp;<SPAN 
-      style="mso-spacerun: yes"> </SPAN>If you use these 
-      adjustments, as you increase the values beyond the default value of 1.0, 
-      more and more pixels will become saturated. <o:p 
-      ></O:P></FONT></FONT></P>
-      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt"><o:p 
-      ><FONT size=2 face=Arial       ></FONT></O:P></P>
+        <div class=Standard><FONT size=2 face=Arial         >The brightness of the Red and Blue channels 
+        relative to the Green channel.<BR 
+      ></FONT></DIV></LI></UL>
+      <p class=Standard><FONT face=Arial       ><FONT size=2       >Image&nbsp;Adjustment (or Color Adjustment) is 
+      applied after the image has been read and scaled appropriately for the 
+      type of image (Raw, FITS or TIFF), and after all calibration frames have 
+      been applied.&nbsp;&nbsp;&nbsp;<SPAN style="mso-spacerun: yes" 
+      > </SPAN>If you use these adjustments, as you increase 
+      the values beyond the default value of 1.0, more and more pixels will 
+      become saturated. <o:p></O:P></FONT></FONT></P>
+      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
+      ><o:p><FONT size=2 face=Arial       ></FONT></O:P></P>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
       ><FONT face=Arial><FONT size=2       >The brightness (or luminance) adjustment applies 
       equally to all three channels.<SPAN style="mso-spacerun: yes" 
       >&nbsp; </SPAN>The values for the <FONT color=#ff0000       >Red</FONT> and <FONT color=#0000ff       >Blue</FONT> scale factors are relative to the <FONT       color=#008000>Green</FONT> channel whose scale factor 
       is the brightness value.<o:p></O:P></FONT></FONT></P>
-      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt"><o:p 
-      ><FONT size=2 face=Arial       ></FONT></O:P></P>
+      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
+      ><o:p><FONT size=2 face=Arial       ></FONT></O:P></P>
       <p><FONT face=Arial><FONT size=2       >If you wish to scale 12 bit TIFF or FITS files to 16 
       bits, then this can be done by setting a brightness value of 16.<BR 
-      ><BR>This can also be useful if you 
-      want to set the channel balance for FITS or CFA format TIFF files based on 
-      the documentation for your camera. </FONT></FONT></P></TD>
+      ><BR>This can also be useful if 
+      you want to set the channel balance for FITS or CFA format TIFF files 
+      based on the documentation for your camera. </FONT></FONT></P></TD>
     <td width="50%"><IMG alt="" src="../images/english/imageadjustment.png" ></TD></TR></TABLE></P>
 <table id=AutoNumber10 style="WIDTH: 82%; BORDER-COLLAPSE: collapse" 
 borderColor=#111111 cellSpacing=0 cellPadding=5 width="82%" border=0>
@@ -1795,35 +1807,35 @@ borderColor=#111111 cellSpacing=0 cellPadding=5 width="82%" border=0>
         <LI>
         <div class=Standard><FONT size=2 face=Arial         >Interpolation mode </FONT></DIV></LI></UL>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
-      ><FONT size=2 face=Arial>By default 
-      DeepSkyStacker will use Daylight White Balance, unless either "No White 
-      Balance Processing" or "Use Camera White Balance" is selected.<SPAN 
+      ><FONT size=2 face=Arial>By 
+      default DeepSkyStacker will use Daylight White Balance, unless either "No 
+      White Balance Processing" or "Use Camera White Balance" is selected.<SPAN 
       style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>If you 
       select "No White Balance Processing", then no white balance scaling is 
       performed at all, which is desirable if you are using software such as 
       StarTools to post process your stacked images.<BR><BR 
-      >In most other cases we recommend that you use Daylight 
-      White Balance.</FONT></P>
+      >In most other cases we recommend that you use 
+      Daylight White Balance.</FONT></P>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
       ><FONT size=2><FONT face=Arial 
       >&nbsp;</P></FONT></FONT></FONT></FONT>
-      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt"><o:p 
-      ></O:P></P>
+      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
+      ><o:p></O:P></P>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
       ><FONT face=Arial><FONT size=2       >The option to choose Use Auto White Balance is no 
       longer supported because it resulted in each frame getting its own unique 
       white balance which messed up dark and flat frame processing.<SPAN 
       style="mso-spacerun: yes">&nbsp; </SPAN>However, if 
       you really want to use Auto White Balance, set your camera to Auto White 
-      Balance and select "Use Camera White Balance".<BR><o:p 
-      ></O:P></FONT></FONT></P>
-      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt"><o:p 
-      ><FONT size=2 face=Arial       ></FONT></O:P></P>
+      Balance and select "Use Camera White Balance".<BR 
+      ><o:p></O:P></FONT></FONT></P>
+      <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
+      ><o:p><FONT size=2 face=Arial       ></FONT></O:P></P>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
       ><FONT size=2 face=Arial       ></FONT>&nbsp;</P>
       <P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt" 
-      ><FONT size=2 face=Arial>The white 
-      balance adjustment values are extracted from the RAW files by LibRaw 
+      ><FONT size=2 face=Arial>The 
+      white balance adjustment values are extracted from the RAW files by LibRaw 
       Copyright © 2008-2019 LibRaw LLC.<SPAN style="mso-spacerun: yes" 
       >&nbsp; </SPAN>LibRaw is based upon the original DCRaw 
       decoder for RAW files written by Dave Coffin.</FONT></P>
@@ -1844,17 +1856,17 @@ borderColor=#111111 cellSpacing=0 cellPadding=5 width="82%" border=0>
     <td vAlign=top width="50%">
       <p class=Standard><b><font       face=Arial><a name=fitssettings 
       ></A>FITS</FONT></B><font face=Arial       ><b> Files<br 
-      ></B></FONT><font size=2 face=Arial       ><br></FONT><font size=2 face=Arial       >If the check box "Single plane 16 bit FITS files 
-      are&nbsp;from ..." is <STRONG>not selected</STRONG>, 
-      DeepSkyStacker will attempt to use automatic detection of 
-      the&nbsp;&nbsp;CFA matrix based upon FITS keywords such as BAYERPAT, 
+      ></B></FONT><font size=2 face=Arial       ><br></FONT><font size=2       face=Arial>If the check box "Single plane 16 bit FITS 
+      files are&nbsp;from ..." is <STRONG>not 
+      selected</STRONG>, DeepSkyStacker will attempt to use automatic detection 
+      of the&nbsp;&nbsp;CFA matrix based upon FITS keywords such as BAYERPAT, 
       COLORTYP, and MOSAIC (for Meade DSI colour cameras).&nbsp;&nbsp; If the 
       FITS file doesn't contain these keywords or the incorrect pattern is 
       specified in the file, you may select the check box and choose the 
       camera/pattern to be used as in earlier releases of DeepSkyStacker. 
       </FONT></P>
-      <p class=Standard><font size=2 face=Arial       >The first step is to select the DSLR or the CCD camera 
-      used to take the images from the list. This is necessary to use the 
+      <p class=Standard><font size=2 face=Arial       >The first step is to select the DSLR or the CCD 
+      camera used to take the images from the list. This is necessary to use the 
       correct Bayer Filter Pattern that will be used to decode the image 
       transforming them from B&amp;W to color images.</FONT></P>
       <p class=Standard><font size=2 face=Arial       >The settings control the values used for:<br 
