@@ -1,4 +1,4 @@
-Welcome to DeepSkyStacker 6.2.0
+Welcome to DeepSkyStacker 6.2.1
 ===============================
 
 Reporting problems:
@@ -13,6 +13,12 @@ Known problems:
    then the exposure is set to zero.   This would be a lot of work to fix as it would require us to implement our own
    custom edit control for the table cell.
    This is considered a LOW priority issue - if anyone wants to develop code to do this a pull request will be considered.
+
+Changes for DeepSkyStacker 6.2.1
+================================
+
+1. Bug fix: Set image adjustment controls to default when a stacked image is loaded.
+
 
 Changes for DeepSkyStacker 6.2.0
 ================================
