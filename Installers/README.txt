@@ -21,6 +21,8 @@ Changes for DeepSkyStacker 6.2.1
 
 2. Bug fix: Correct zeroing of colour balance controls after apply.
 
+3. Increase range of ASinH beta (stretch factor) from [0.0, 1000.0] to [0.0, 5000.0]
+
 Changes for DeepSkyStacker 6.2.0
 ================================
 
