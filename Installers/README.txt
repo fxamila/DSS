@@ -19,6 +19,7 @@ Changes for DeepSkyStacker 6.2.1
 
 1. Bug fix: Set image adjustment controls to default when a stacked image is loaded.
 
+2. Bug fix: Correct zeroing of colour balance controls after apply.
 
 Changes for DeepSkyStacker 6.2.0
 ================================

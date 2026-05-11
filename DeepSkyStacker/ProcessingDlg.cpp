@@ -159,12 +159,18 @@ namespace DSS
 		greenShift = 0.0f;
 		blueShift = 0.0f;
 
-		controls->redSlider->setValue(100);
-		controls->redSlider->setSliderPosition(100);
-		controls->greenSlider->setValue(100);
-		controls->greenSlider->setSliderPosition(100);
-		controls->blueSlider->setValue(100);
-		controls->blueSlider->setSliderPosition(100);	
+		//
+		// Set the sliders to the middle of their range, which corresponds to zero shift
+		// (all have the same range, so just use the red slider)
+		//
+		auto value = controls->redSlider->maximum() / 2;
+
+		controls->redSlider->setValue(value);
+		controls->redSlider->setSliderPosition(value);
+		controls->greenSlider->setValue(value);
+		controls->greenSlider->setSliderPosition(value);
+		controls->blueSlider->setValue(value);
+		controls->blueSlider->setSliderPosition(value);	
 	}
 
 	void ProcessingDlg::zeroAsinHControls()
