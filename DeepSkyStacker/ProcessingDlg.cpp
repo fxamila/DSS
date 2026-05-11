@@ -159,12 +159,12 @@ namespace DSS
 		greenShift = 0.0f;
 		blueShift = 0.0f;
 
-		controls->redSlider->setValue(50);
-		controls->redSlider->setSliderPosition(50);
-		controls->greenSlider->setValue(50);
-		controls->greenSlider->setSliderPosition(50);
-		controls->blueSlider->setValue(50);
-		controls->blueSlider->setSliderPosition(50);	
+		controls->redSlider->setValue(100);
+		controls->redSlider->setSliderPosition(100);
+		controls->greenSlider->setValue(100);
+		controls->greenSlider->setSliderPosition(100);
+		controls->blueSlider->setValue(100);
+		controls->blueSlider->setSliderPosition(100);	
 	}
 
 	void ProcessingDlg::zeroAsinHControls()
@@ -192,9 +192,6 @@ namespace DSS
 		const QSignalBlocker betaSliderBlocker(controls->asinhStretchSlider);
 		const QSignalBlocker bpSpinBoxBlocker(controls->asinhBPSpinBox);
 		const QSignalBlocker bpSliderBlocker(controls->asinhBPSlider);
-		const QSignalBlocker redSliderBlocker(controls->redSlider);
-		const QSignalBlocker greenSliderBlocker(controls->greenSlider);
-		const QSignalBlocker blueSliderBlocker(controls->blueSlider);
 		const QSignalBlocker humanWeightedBlocker(controls->asinhHumanWeighted);
 		const QSignalBlocker previewBlocker(controls->previewCB);
 
@@ -206,6 +203,8 @@ namespace DSS
 
 		controls->asinhBPSpinBox->setValue(DefaultAsinhBP);
 		controls->asinhBPSlider->setValue(static_cast<int>(DefaultAsinhBP * 1000.0f));
+
+		zeroColourBalanceControls();
 
 		asinhHWLuminance = true;
 		controls->asinhHumanWeighted->setChecked(true);
