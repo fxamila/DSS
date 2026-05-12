@@ -362,6 +362,11 @@ namespace DSS
 		//
 		undoRedoStack.add(DeepStack{});
 
+		//
+		// Reset the preview DeepStack object so we don't pick up old previewmages
+		//
+		previewDeepStack.reset();
+
 		QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 		dssApp->deepStack().reset();
 		dssApp->deepStack().SetProgress(&dlg);
@@ -469,6 +474,11 @@ namespace DSS
 				// Initialize the undo-redo image stack with an unpopulated DeepStack
 				//
 				undoRedoStack.add(DeepStack{});
+
+				//
+				// Reset the preview DeepStack object so we don't pick up old previewmages
+				//
+				previewDeepStack.reset();
 
 				QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 				dssApp->deepStack().reset();
