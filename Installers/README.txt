@@ -23,8 +23,9 @@ Changes for DeepSkyStacker 6.2.1
 
 3. Increase range of ASinH beta (stretch factor) from [0.0, 1000.0] to [0.0, 5000.0]
 
-4. Bug fix: If a new image was loaded in the Processing pane, and was smaller than the previous image, then
-   it was displayed in the upper left quadrant of the old image.
+4. Bug fix: If a new image was loaded in the Processing pane with preview active, and was smaller than the previous image,
+   then it was displayed in the upper left quadrant of the old image.  If the new image was larger, then only the upper
+   left quadrant (the size of the smaller image) of the new image was displayed.
 
 Changes for DeepSkyStacker 6.2.0
 ================================
