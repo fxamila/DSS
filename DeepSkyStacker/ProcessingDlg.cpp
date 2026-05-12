@@ -130,11 +130,6 @@ namespace DSS
 		controls->asinhBPSlider->setTracking(false);
 		controls->asinhStretchSlider->setTracking(false);
 
-		//
-		// Set adjustment controls to their default values
-		// 
-		setAdjustmentControlDefaults();
-
 		connectSignalsToSlots();
 
 		updateControls();
