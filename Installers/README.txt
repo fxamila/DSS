@@ -1,4 +1,4 @@
-Welcome to DeepSkyStacker 6.2.1
+Welcome to DeepSkyStacker 6.2.1 Beta 1
 ===============================
 
 Reporting problems:
@@ -14,7 +14,7 @@ Known problems:
    custom edit control for the table cell.
    This is considered a LOW priority issue - if anyone wants to develop code to do this a pull request will be considered.
 
-Changes for DeepSkyStacker 6.2.1
+Changes for DeepSkyStacker 6.2.1 Beta 1
 ================================
 
 1. Bug fix: Set image adjustment controls to default when a stacked image is loaded.
