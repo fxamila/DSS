@@ -1,4 +1,4 @@
-Welcome to DeepSkyStacker 6.2.1 Beta 1
+Welcome to DeepSkyStacker 6.2.1 Beta 2
 ===============================
 
 Reporting problems:
@@ -14,7 +14,7 @@ Known problems:
    custom edit control for the table cell.
    This is considered a LOW priority issue - if anyone wants to develop code to do this a pull request will be considered.
 
-Changes for DeepSkyStacker 6.2.1 Beta 1
+Changes for DeepSkyStacker 6.2.1 Beta 2
 ================================
 
 1. Bug fix: Set image adjustment controls to default when a stacked image is loaded.
@@ -26,6 +26,10 @@ Changes for DeepSkyStacker 6.2.1 Beta 1
 4. Bug fix: If a new image was loaded in the Processing pane with preview active, and was smaller than the previous image,
    then it was displayed in the upper left quadrant of the old image.  If the new image was larger, then only the upper
    left quadrant (the size of the smaller image) of the new image was displayed.
+
+5. Bug fix: Selecting Super-Pixel mode for FITS files results in assertion failures in CGrayBitmapT::CheckXY().
+   Super-pixel mode should have been set for the bitmap *after* reading the FITS file into it, not before.  It
+   would appear that this problem dates back to before 2018.
 
 Changes for DeepSkyStacker 6.2.0
 ================================

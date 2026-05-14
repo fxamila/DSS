@@ -151,11 +151,11 @@ public:
 
 	bool Open();
 	bool Read();
-	virtual bool Close();
+	virtual void Close();
 
 	virtual bool OnOpen() { return true; }
 	virtual bool OnRead(int, int, double, double, double) { return true; }
-	virtual bool OnClose() { return true; }
+	virtual void OnClose() {}
 };
 
 /* ------------------------------------------------------------------- */

@@ -857,28 +857,23 @@ bool CFITSReader::Read()
 
 /* ------------------------------------------------------------------- */
 
-bool CFITSReader::Close()
+void CFITSReader::Close()
 {
 	ZFUNCTRACE_RUNTIME();
-	bool				bResult = false;
 	int					nStatus = 0;
 
 	if (m_fits)
 	{
-		bResult = OnClose();
-		if (bResult)
-		{
-			fits_close_file(m_fits, &nStatus);
-			m_fits = nullptr;
-		};
+		OnClose();
+		fits_close_file(m_fits, &nStatus);
+		m_fits = nullptr;
 	};
-
-	return bResult;
 }
 
 
 class CFITSReadInMemoryBitmap : public CFITSReader
 {
+	using Inherited = CFITSReader;
 private :
 	std::shared_ptr<CMemoryBitmap>& m_outBitmap;
 	std::shared_ptr<CMemoryBitmap> m_pBitmap;
@@ -891,11 +886,14 @@ public :
 
 	virtual ~CFITSReadInMemoryBitmap() override { Close(); }
 
-	virtual bool Close() override { return OnClose(); }
+	virtual void Close() override
+	{
+		OnClose();
+	}
 
 	virtual bool OnOpen() override;
 	virtual bool OnRead(int lX, int lY, double fRed, double fGreen, double fBlue) override;
-	virtual bool OnClose() override;
+	virtual void OnClose() override;
 };
 
 /* ------------------------------------------------------------------- */
@@ -987,30 +985,6 @@ bool CFITSReadInMemoryBitmap::OnOpen()
 				DSSBase::Method::QErrorMessage);
 		}
 
-		if (m_CFAType != CFATYPE_NONE)
-		{
-			if (CCFABitmapInfo* pCFABitmapInfo = dynamic_cast<CCFABitmapInfo*>(m_pBitmap.get()))
-			{
-				m_pBitmap->SetCFA(true);
-				pCFABitmapInfo->SetCFAType(m_CFAType);
-				//
-				// Set the CFA/Bayer offset information into the CFABitmapInfo
-				//
-				pCFABitmapInfo->setXoffset(m_xBayerOffset);
-				pCFABitmapInfo->setYoffset(m_yBayerOffset);
-				if (::IsCYMGType(m_CFAType))
-					pCFABitmapInfo->UseBilinear(true);
-				else if (IsFITSRawBayer())
-					pCFABitmapInfo->UseRawBayer(true);
-				else if (IsSuperPixels())			// Was IsFITSSuperPixels()
-					pCFABitmapInfo->UseSuperPixels(true);
-				else if (IsFITSBilinear())
-					pCFABitmapInfo->UseBilinear(true);
-				else if (IsFITSAHD())
-					pCFABitmapInfo->UseAHD(true);
-			}
-		}
-
 		m_pBitmap->SetMaster(false);
 		if (0. != m_fExposureTime)
 			m_pBitmap->SetExposure(m_fExposureTime);
@@ -1073,17 +1047,39 @@ bool CFITSReadInMemoryBitmap::OnRead(int lX, int lY, double fRed, double fGreen,
 
 /* ------------------------------------------------------------------- */
 
-bool CFITSReadInMemoryBitmap::OnClose()
+void CFITSReadInMemoryBitmap::OnClose()
 {
 	ZFUNCTRACE_RUNTIME();
 	if (static_cast<bool>(m_pBitmap))
 	{
+		if (m_CFAType != CFATYPE_NONE)
+		{
+			if (CCFABitmapInfo* pCFABitmapInfo = dynamic_cast<CCFABitmapInfo*>(m_pBitmap.get()))
+			{
+				m_pBitmap->SetCFA(true);
+				pCFABitmapInfo->SetCFAType(m_CFAType);
+				//
+				// Set the CFA/Bayer offset information into the CFABitmapInfo
+				//
+				pCFABitmapInfo->setXoffset(m_xBayerOffset);
+				pCFABitmapInfo->setYoffset(m_yBayerOffset);
+				if (::IsCYMGType(m_CFAType))
+					pCFABitmapInfo->UseBilinear(true);
+				else if (IsFITSRawBayer())
+					pCFABitmapInfo->UseRawBayer(true);
+				else if (IsSuperPixels())			// Was IsFITSSuperPixels()
+					pCFABitmapInfo->UseSuperPixels(true);
+				else if (IsFITSBilinear())
+					pCFABitmapInfo->UseBilinear(true);
+				else if (IsFITSAHD())
+					pCFABitmapInfo->UseAHD(true);
+			}
+		}
+
 		m_pBitmap->m_ExtraInfo = m_ExtraInfo;
 		m_outBitmap = m_pBitmap;
-		return true;
+		return;
 	}
-	else
-		return false;
 }
 
 
